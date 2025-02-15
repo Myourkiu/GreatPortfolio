@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Poppins } from "next/font/google";
+import StarBackground from "./components/StarBackground";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body
         className={`${poppins.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
       >
+        <StarBackground/>
         {children}
       </body>
     </html>
