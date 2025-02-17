@@ -25,11 +25,12 @@ const TopContent = () => {
             variants={slideInFromLeft(0.8)}>
                 Sou um Engenheiro de Software Fullstack com experiências em Websites e desenvolvimento de Softwares. Confira meus projetos e skills.
             </motion.p>
-            <motion.button variants={slideInFromLeft(1)}
-            className='my-5 p-2 button-primary text-center text-gray-50 cursor-pointer rounded-lg max-w-[200px] flex items-center gap-2 justify-center'>
-                <MdOutlineFileDownload className='text-gray-50' size={23}/>
+            <motion.a variants={slideInFromLeft(1)}
+            className='my-5 p-2 button-primary text-center text-gray-50 cursor-pointer rounded-lg max-w-[200px] flex items-center gap-2 justify-center' 
+            href='/curriculo.pdf' download="curriculo-pedro-figueiredo.pdf">
+                <MdOutlineFileDownload className='text-gray-50' size={23} />
                 Baixar currículo
-            </motion.button>
+            </motion.a>
         </div>
 
         <motion.div className='hidden lg:block w-full h-full' 
