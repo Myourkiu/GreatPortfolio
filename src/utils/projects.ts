@@ -2,7 +2,7 @@ export const projects: Project[] = [
     {
         title: "OwProduct",
         imageUrl: "/owproduct.png",
-        description: "Plataforma de assinatura para gerenciamento de estoque, utilizando arquitetura hexagonal no backend. Conta com middleware para importação de arquivos XLSX e CSV, integração com Mercado Pago para pagamentos e Recharts para visualização de dados. Implementa JWT e NextAuth para autenticação, Docker para containerização, garantindo escalabilidade e segurança e Zod e React Hook Form para a validação de formulários.",
+        description: "Plataforma de assinatura para gerenciamento de estoque, utilizando arquitetura hexagonal no back-end. Conta com middleware para importação de arquivos XLSX e CSV, integração com Mercado Pago para pagamentos e Recharts para visualização de dados. Implementa JWT e NextAuth para autenticação, Docker para containerização, garantindo escalabilidade e segurança e Zod e React Hook Form para a validação de formulários.",
         slideDirection: "left",
     },
     {
