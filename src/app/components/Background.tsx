@@ -11,6 +11,7 @@ const Background = () => {
         </video>
         <TopContent/>
         <PacManSkills/>
+        <AboutMe/>
     </div>
   )
 }
