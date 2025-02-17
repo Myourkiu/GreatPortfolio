@@ -8,7 +8,7 @@ const AboutMe = () => {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
       className="w-full flex flex-col items-start px-12 my-4 md:px-20"
     >
       <motion.h1

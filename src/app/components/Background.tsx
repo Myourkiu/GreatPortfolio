@@ -2,6 +2,7 @@ import React from 'react'
 import TopContent from './TopContent'
 import PacManSkills from './PacManSkills'
 import AboutMe from './AboutMe'
+import SelectedProjects from './SelectedProjects'
 
 const Background = () => {
   return (
@@ -12,6 +13,7 @@ const Background = () => {
         <TopContent/>
         <PacManSkills/>
         <AboutMe/>
+        <SelectedProjects/>
     </div>
   )
 }
