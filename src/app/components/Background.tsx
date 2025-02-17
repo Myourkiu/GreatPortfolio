@@ -1,5 +1,7 @@
 import React from 'react'
 import TopContent from './TopContent'
+import PacManSkills from './PacManSkills'
+import AboutMe from './AboutMe'
 
 const Background = () => {
   return (
@@ -8,6 +10,7 @@ const Background = () => {
             <source src='/blackhole.webm' type='video/webm'/>
         </video>
         <TopContent/>
+        <PacManSkills/>
     </div>
   )
 }
