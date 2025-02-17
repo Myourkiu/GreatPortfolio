@@ -2,14 +2,14 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 import { slideInFromLeft } from '@/utils/motion'
-// import Image from 'next/image';
 import { MdOutlineFileDownload } from 'react-icons/md';
 const TopContent = () => {
   return (
     <motion.div
     initial="hidden"
-    animate="visible"
-    className='flex flex-col md:flex-row items-center justify-center px-20 mt-40 w-full z-[20]'>
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.3 }}
+    className='flex flex-col md:flex-row items-center justify-center px-12 md:px-20 mt-40 w-full z-[20]'>
         <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
             <motion.div
             variants={slideInFromLeft(0.5)}
