@@ -1,20 +1,36 @@
 'use client'
 
-import {  Languages, SwitchLanguage } from "@/utils/languages";
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
+import { Languages, SwitchLanguage } from "@/utils/languages";
 
 interface LanguageContextType {
   language: Languages;
   setLanguage: (lang: Languages) => void;
+  messages: { [key: string]: string };
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
-  const [language, setLanguage] = useState<Languages>(SwitchLanguage[0]); // Padrão: pt-br
+  const [language, setLanguage] = useState<Languages>(SwitchLanguage[0]);
+  const [messages, setMessages] = useState<{ [key: string]: string }>({});
+
+  useEffect(() => {
+    const loadMessages = async () => {
+      try {
+        const res = await fetch(`/locales/${language.location}/common.json`);
+        const data = await res.json();
+        setMessages(data);
+      } catch (error) {
+        console.error("Erro ao carregar mensagens:", error);
+      }
+    };
+
+    loadMessages();
+  }, [language]);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage, messages }}>
       {children}
     </LanguageContext.Provider>
   );
