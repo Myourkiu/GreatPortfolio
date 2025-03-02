@@ -1,7 +1,9 @@
+'use client'
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { slideInFromLeft, slideInFromRight } from "@/utils/motion";
+import { useIntl } from "react-intl";
 
 interface ProjectProps {
   title: string;
@@ -16,11 +18,11 @@ const Project: React.FC<ProjectProps> = ({
   description,
   slideDirection = "left",
 }) => {
-  // Seleciona a variante de animação de acordo com a slideDirection
   const imageSlideVariant =
-    slideDirection === "left" ? slideInFromLeft(0.8) : slideInFromRight(0.8);
-
-    const desktopDescriptionVariant = slideDirection === "left" ? slideInFromRight(0.8) : slideInFromLeft(0.8);
+  slideDirection === "left" ? slideInFromLeft(0.8) : slideInFromRight(0.8);
+  
+  const desktopDescriptionVariant = slideDirection === "left" ? slideInFromRight(0.8) : slideInFromLeft(0.8);
+  const { formatMessage } = useIntl();
 
   return (
     <motion.div
@@ -47,13 +49,13 @@ const Project: React.FC<ProjectProps> = ({
             height={600}
             className="object-cover rounded-xl"
           />
-          <p className="text-white text-sm lg:hidden">{description}</p>
+          <p className="text-white text-sm lg:hidden">{formatMessage({id: description})}</p>
         </motion.div>
             <motion.p 
             initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }} 
-          variants={desktopDescriptionVariant} className={`hidden lg:flex text-white w-full text-xl ${slideDirection == "left" ? "order-2" : "order-1"}`}>{description}</motion.p>
+          variants={desktopDescriptionVariant} className={`hidden lg:flex text-white w-full text-xl ${slideDirection == "left" ? "order-2" : "order-1"}`}>{formatMessage({id: description})}</motion.p>
       </div>
 
     </motion.div>
