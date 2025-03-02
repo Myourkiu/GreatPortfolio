@@ -23,7 +23,7 @@ const SelectedProjects = () => {
       </motion.h1>
 
       {projects.map((project, index) => (
-      <Project key={index} title={project.title} description={project.description} imageUrl={project.imageUrl} slideDirection={project.slideDirection}/>
+      <Project key={index} title={project.title} description={project.description} imageUrl={project.imageUrl} slideDirection={project.slideDirection} technologies={project.technologies}/>
     ))}
     </motion.div>
   );
