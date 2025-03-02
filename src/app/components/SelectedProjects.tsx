@@ -4,9 +4,10 @@ import { slideInFromLeft } from "@/utils/motion";
 import React from "react";
 import Project from "./Project";
 import { projects } from "@/utils/projects";
+import { useIntl } from "react-intl";
 
 const SelectedProjects = () => {
-    
+    const { formatMessage } = useIntl();
   return (
     <motion.div
       initial="hidden"
@@ -18,7 +19,7 @@ const SelectedProjects = () => {
         variants={slideInFromLeft(0.5)}
         className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 w-full text-center text-4xl my-4"
       >
-        Projetos Selecionados
+        {formatMessage({ id: "selectedProjects" })}
       </motion.h1>
 
       {projects.map((project, index) => (
