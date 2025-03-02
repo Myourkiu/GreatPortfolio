@@ -52,7 +52,7 @@ const TopContent = () => {
           className="flex items-center gap-2"
         >
           <a
-            className="my-5 p-2 button-primary text-center text-gray-50 cursor-pointer rounded-lg max-w-[230px] flex items-center gap-2 justify-center"
+            className="my-5 p-2 button-primary text-center text-gray-50 cursor-pointer rounded-lg w-full max-w-[230px] flex items-center gap-2 justify-center text-sm"
             href="/curriculo.pdf"
             download="curriculo-pedro-figueiredo.pdf"
           >
@@ -66,7 +66,7 @@ const TopContent = () => {
                 alt={language.location}
                 className="w-12 p-1"
               />
-              <MdKeyboardArrowDown size={20} color="white" />
+              <MdKeyboardArrowDown size={20} color="white" className="hidden md:block" />
             </PopoverTrigger>
             <PopoverContent className="card-primary w-20 rounded-lg flex flex-col items-center gap-2 border-none">
               {SwitchLanguage.map((lang, index) => (
