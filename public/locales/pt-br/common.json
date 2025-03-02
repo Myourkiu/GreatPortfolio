@@ -1,8 +1,14 @@
 {
-    "welcome": "Bem-vindo(a)",
-    "toMy": "ao meu",
-    "portfolio": " portfólio",
-    "description": "Sou um Engenheiro de Software Fullstack com experiências em Websites e desenvolvimento de Softwares. Confira meus projetos e skills.",
-    "downloadResume": "Baixar currículo"
-  }
-  
+  "welcome": "Bem-vindo(a)",
+  "toMy": "ao meu",
+  "portfolio": " portfólio",
+  "description": "Sou um Engenheiro de Software Fullstack com experiências em Websites e desenvolvimento de Softwares. Confira meus projetos e skills.",
+  "downloadResume": "Baixar currículo",
+  "aboutMe": "Sobre mim",
+  "myNameIs": "Meu nome é",
+  "pedroFigueiredo": "Pedro Figueiredo,",
+  "aboutMeIntro": "sou Desenvolvedor Fullstack especializado no desenvolvimento de aplicações web e sistemas escaláveis.",
+  "aboutMeExperience": "Tenho experiência em criar soluções robustas e eficientes, focando em código limpo, manutenível e escalável. Minha stack inclui tecnologias modernas como React, Next.js, TypeScript, TailwindCSS no Front-End, além de um sólido conhecimento em C#/.NET, PostgreSQL, Microsoft SQL Server e MySQL para o Back-End.",
+  "aboutMeSkills": "Tenho experiência em desenvolvimento de APIs, microsserviços e integração com serviços externos, utilizando JWT, SignalR, WebHooks e Middleware.",
+  "aboutMeGoal": "Meu objetivo é entregar soluções eficientes e inovadoras, garantindo alta performance e uma experiência fluida para os usuários. Estou sempre em busca de novos desafios e oportunidades para aprimorar minhas habilidades e contribuir para projetos impactantes.",
+}

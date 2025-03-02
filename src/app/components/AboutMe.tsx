@@ -2,8 +2,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { slideInFromRight } from "@/utils/motion";
+import { useIntl } from "react-intl";
 
 const AboutMe = () => {
+  const { formatMessage } = useIntl();
+
   return (
     <motion.div
       initial="hidden"
@@ -15,7 +18,7 @@ const AboutMe = () => {
         variants={slideInFromRight(0.5)}
         className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 w-full text-center text-4xl my-4"
       >
-        Sobre mim
+        {formatMessage({ id: "aboutMe" })}
       </motion.h1>
 
       <motion.section
@@ -26,11 +29,11 @@ const AboutMe = () => {
         <div className="text-lg">
           <div className="text-[#E4B1F0] text-xl">{"<h1>"}</div>
           <p className="ml-8 break-words text-balance">
-            Meu nome é <br />
-            <span className="text-purple-500">Pedro Figueiredo,</span>
+            {formatMessage({ id: "myNameIs" })}
             <br />
-            sou Desenvolvedor Fullstack especializado no desenvolvimento de
-            aplicações web e sistemas escaláveis.
+            <span className="text-purple-500">{formatMessage({ id: "pedroFigueiredo" })}</span>
+            <br />
+            {formatMessage({ id: "aboutMeIntro" })}
           </p>
           <div className="text-[#E4B1F0] text-xl">{"</h1>"}</div>
         </div>
@@ -38,17 +41,7 @@ const AboutMe = () => {
         <div className="text-lg">
           <div className="text-[#E4B1F0] text-xl">{"<p>"}</div>
           <p className="ml-8 text-pretty">
-            Tenho experiência em criar soluções robustas e eficientes, focando
-            em código limpo, manutenível e escalável. Minha stack inclui
-            tecnologias modernas como{" "}
-            <span className="text-purple-500">
-              React, Next.js, TypeScript, TailwindCSS
-            </span>{" "}
-            no Front-End, além de um sólido conhecimento em{" "}
-            <span className="text-purple-500">
-              C#/.NET, PostgreSQL, Microsoft SQL Server e MySQL
-            </span>{" "}
-            para o Back-End.
+            {formatMessage({ id: "aboutMeExperience" })}
           </p>
           <div className="text-[#E4B1F0] text-xl">{"</p>"}</div>
         </div>
@@ -56,13 +49,7 @@ const AboutMe = () => {
         <div className="text-lg">
           <div className="text-[#E4B1F0] text-xl">{"<p>"}</div>
           <p className="ml-8 text-pretty">
-            Tenho experiência em desenvolvimento de APIs, microsserviços e
-            integração com serviços externos, utilizando{" "}
-            <span className="text-purple-500">
-             JWT, SignalR, WebHooks e Middleware
-            </span>
-            .
-            
+            {formatMessage({ id: "aboutMeSkills" })}
           </p>
           <div className="text-[#E4B1F0] text-xl">{"</p>"}</div>
         </div>
@@ -70,10 +57,7 @@ const AboutMe = () => {
         <div className="text-lg">
           <div className="text-[#E4B1F0] text-xl">{"<p>"}</div>
           <p className="ml-8 text-pretty">
-            Meu objetivo é entregar soluções eficientes e inovadoras, garantindo
-            alta performance e uma experiência fluida para os usuários. Estou
-            sempre em busca de novos desafios e oportunidades para aprimorar
-            minhas habilidades e contribuir para projetos impactantes.
+            {formatMessage({ id: "aboutMeGoal" })}
           </p>
           <div className="text-[#E4B1F0] text-xl">{"</p>"}</div>
         </div>
